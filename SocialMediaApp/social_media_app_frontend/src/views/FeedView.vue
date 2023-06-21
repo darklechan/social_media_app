@@ -53,7 +53,7 @@
                     </div>   
                 </div>
             </div>
-                        <div class="p-4 bg-white border border-gray-200 rounded-lg">
+            <div class="p-4 bg-white border border-gray-200 rounded-lg">
                 <div class="mb-6 flex items-center justify-between">
                     <div class="flex items-center space-x-6">
                         <img src="https://i.pravatar.cc/300?img=70" class="w-[40px] rounded-full">
@@ -88,12 +88,18 @@
             </div>
         </div>
         <div class="main-right col-span-1 space-y-4">
-            <div class="p-4 bg-white border border-gray-200 rounded-lg">
-                <h3 class="mb-6 text-xl">People you may know</h3>
-            </div>
-            <div class="p-4 bg-white border border-gray-200 rounded-lg">
-                <h3 class="mb-6 text-xl">Trends</h3>
-            </div>
+            <PeopleYouMayKnow />
+            <Trends />
         </div>
     </div>
 </template>
+
+<script>
+import PeopleYouMayKnow from '@/components/PeopleYouMayKnow.vue'
+import Trends from '@/components/Trends.vue'
+
+export default {
+    name: "FeedView",
+    components: { PeopleYouMayKnow, Trends }
+}
+</script>
